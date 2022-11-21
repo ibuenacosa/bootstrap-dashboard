@@ -1,0 +1,81 @@
+// Variables
+$avatarSize: 40px;
+$gray100: #c4c4c4;
+$gray200: #C5C7CD;
+$gray300: #9FA2B4;
+$gray400: #A4A6B3;
+$navActiveColor: #DDE2FF;
+$accentColor: #3751FF;
+$sideNavColor: #363740;
+
+* {
+    font-family: 'Mulish', sans-serif !important;
+    overflow-x: hidden;
+}
+
+// Additional Utilities
+// Large Screen
+@media (min-width: 992px) {
+    .h-lg-100 { height: 100%; }
+    .lg-border-top-0 { border-top: 0 !important; }
+    .lg-border-left { border-left: 1px solid #DFDFDF; }
+}
+
+@media (max-width: 992px) {
+    .w-md-100 { width: 100%; }
+}
+
+.z-index-99 { z-index: 99; }
+.fs-12 { font-size: 12px; }
+.fs-14 { font-size: 14px; }
+.fs-19 { font-size: 19px; }
+.text-gray-200 { color: $gray200; }
+.text-gray-300 { color: $gray300 !important; }
+.text-gray-400 { color: $gray400; }
+.text-accent { color: $accentColor; }
+
+.navbar-toggler-icon {
+    width: 1.5em;
+    height: 1.5em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+// Custom Styling
+.main-wrap { background: #F7F8FC; }
+.bg-nav { background-color: $sideNavColor; }
+
+.avatar-img {
+    width: $avatarSize;
+    height: $avatarSize;
+    padding: 1.5px;
+    border: 1.5px solid $gray100;
+}
+
+.cbox {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.nav-item {
+    .nav-link.active {
+        color: $navActiveColor;
+        background-color: rgba(159,162,180,8%);
+        border-left: 3px solid $gray300;
+    }
+
+    .nav-link:focus, .nav-link:hover {
+        color: $navActiveColor;
+    }
+}
+
+
+
+.stats-card:hover {
+    border: 1px solid $accentColor;
+    cursor: pointer;
+
+    p { color: $accentColor !important; }
+}
